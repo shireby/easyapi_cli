@@ -22,7 +22,6 @@ const done = () => {
 const eventEmitter = new EventEmitter();
 
 eventEmitter.on('done', () => {
-    console.log('Called');
     done();
 });
 

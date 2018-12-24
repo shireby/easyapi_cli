@@ -3,6 +3,8 @@ const colors = require('colors');
 const fs = require('fs');
 const shell = require('shelljs');
 
+const tag = 'v1.0.0-beta';
+const repo = 'https://github.com/shireby/easyapi.git';
 
 module.exports = (callback) => {
     prompt.start();
@@ -32,17 +34,22 @@ module.exports = (callback) => {
         
         console.log('\n Createing project'.bgGreen.white + '\n\n');
         console.log(`Your new Project ${result.project_name.green} has been created \n`);
-        console.log(test);
         
         const json = JSON.stringify({
             "name": result.project_name,
             "version": result.version
         }, null, 4);
+        
+        console.log(`Building project`.green);
 
-        // fs.writeFile('easyapi.json', json, 'utf8', () => { 
-        //     console.log(`easyapi.json file create`.green);
-        // });
-
-        callback();
+        shell.exec(`git clone --branch ${tag} ${repo} . &> /dev/null`)
+        
+        /** Remove .git */
+        shell.exec('rm -rf .git');
+        
+        fs.writeFile('easyapi.json', json, 'utf8', () => { 
+            console.log(`easyapi.json file create`.green);
+            callback();
+        });      
     });
 };

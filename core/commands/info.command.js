@@ -1,5 +1,5 @@
 module.exports = [{
-        header: 'Easy API CLI 🧐',
+        header: 'Easy API CLI 🎩',
         content: 'A framework for making REST API creation easy'
     },
     {
