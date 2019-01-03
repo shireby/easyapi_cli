@@ -1,6 +1,6 @@
 # EasyAPI 🎩
 
-EasyAPI is a lightweight Framework, built on express and bookshelf/Knex and written in TypeScript. EasyAPI should help you get a REST APIup and running, with a database connection, in no time.
+EasyAPI is a lightweight Framework, built on express and bookshelf/Knex and written in TypeScript. EasyAPI should help you get a REST API up and running, with a database connection, in no time.
 
 EasyAPI comes with it's own CLI tool for Generating Controllers, Models and Services. Is also comes with some other useful utilities.
 ## Get Started
@@ -10,6 +10,15 @@ Create new project
 ```
 $ eaip --new
 ```
+
+## Setup docker DB
+
+Ensure you have installed Docker and you are in the root of the project
+
+```
+$ docker-compose up -d
+```
+
 
 ## Routes
 
