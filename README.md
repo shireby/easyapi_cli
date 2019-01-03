@@ -8,7 +8,7 @@ EasyAPI comes with it's own CLI tool for Generating Controllers, Models and Serv
 Create new project
 
 ```
-$ ./setup
+$ eaip --new
 ```
 
 ## Routes
@@ -32,6 +32,13 @@ export const AppRoutes: IEasyApiRoute[] = [
 
 ## CLI
 
+#### Create Env file
+You will need this to run the project.
+
+```
+$ eapi --env-file
+```
+
 #### Generators
 
 ##### Controllers
@@ -52,14 +59,6 @@ $ eapi -g service=[service-name]
 
 ``` 
 $ eapi -g middleware=[middleware-name] 
-```
-
-
-#### Create Env file
-You will need this to run the project.
-
-```
-$ eapi --env-file
 ```
 
 #### Knex CLI for migrations 
