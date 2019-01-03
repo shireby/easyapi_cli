@@ -4,7 +4,12 @@ module.exports = [{
     },
     {
         header: 'Options',
-        optionList: [{
+        optionList: [
+            {
+                name: 'new',
+                description: 'Create new Easy API project'
+            },
+            {
                 name: 'generate controller=[controller-name]',
                 description: 'Generate a controller'
             },
@@ -15,7 +20,7 @@ module.exports = [{
             {
                 name: 'start',
                 description: 'Starts development server and watches files'
-            }
+            }          
         ]
     }
 ];

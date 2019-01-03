@@ -42,13 +42,15 @@ module.exports = (callback) => {
         
         console.log(`Building project`.green);
 
-        shell.exec(`git clone --branch ${tag} ${repo} . &> /dev/null`)
+        shell.exec(`git clone --branch ${tag} ${repo} . &> /dev/null`);
         
         /** Remove .git */
         shell.exec('rm -rf .git');
         
+        shell.exec('yarn install');
+
         fs.writeFile('easyapi.json', json, 'utf8', () => { 
-            console.log(`easyapi.json file create`.green);
+            console.log(`easyapi.json file created`.green);
             callback();
         });      
     });

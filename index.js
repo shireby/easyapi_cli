@@ -7,6 +7,7 @@ const commandLineUsage = require('command-line-usage');
 const shell = require('shelljs');
 const info = require('./core/commands/info.command');
 const EventEmitter = require('events');
+const colors = require('colors');
 
 /**  SET CLI USAGE */
 const cliUsage = commandLineUsage(info);
@@ -50,7 +51,8 @@ if (options['start'] !== undefined) {
 /** SETUP DEVELOPMENT ENVIRONMENT FILE */
 if (options['env-setup'] !== undefined) {
     if (!fs.existsSync('.env')) {
-        shell.exec('cp example.env .env');
+        shell.exec('cp .env.example .env');
+        console.log('All done your .env file has been created 👍'.green);
     } else {
         console.log('Looks like your .env already exists 👍');
     }
