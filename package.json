@@ -4,7 +4,8 @@
   "description": "CLI tool for creating easy API Node projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +19,8 @@
     "lodash": "^4.17.11",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.4.2",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "typescript": "^3.2.2"
   },
   "bin": {
     "eapi": "./index.js"

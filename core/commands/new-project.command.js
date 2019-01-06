@@ -3,7 +3,7 @@ const colors = require('colors');
 const fs = require('fs');
 const shell = require('shelljs');
 
-const tag = 'v1.0.0-beta';
+const tag = 'v1.0.1-beta';
 const repo = 'https://github.com/shireby/easyapi.git';
 
 module.exports = (callback) => {
