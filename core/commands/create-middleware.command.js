@@ -1,4 +1,4 @@
-const EasyApiGenerator = require('/../generators/easy-api.generator');
+const EasyApiGenerator = require('../generators/easy-api.generator');
 
 module.exports = new EasyApiGenerator({
     templatePath: 'core/file_templates/middleware.template',

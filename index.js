@@ -70,7 +70,7 @@ if (options.new !== undefined) {
 
 /** CREATE CONTROLLER IF OPTION IS SET */
 if (options.generate !== undefined && options.generate.indexOf('controller=') > -1) {
-    const controllerGenerator = require('./core/commands/create-contoller.command');
+    const controllerGenerator = require('./core/commands/create-controller.command');
     controllerGenerator.generate();
     eventEmitter.emit('done');
 }
