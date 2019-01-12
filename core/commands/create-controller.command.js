@@ -1,7 +1,11 @@
-const EasyApiGenerator = require('../generators/easy-api.generator');
+const EasyApiGenerator = require(`${appRoot}/core/generators/easy-api.generator`);
+
+const optionDefinitions = require('./options.command');
+const commandLineArgs = require('command-line-args');
+const options = commandLineArgs(optionDefinitions);
 
 module.exports = new EasyApiGenerator({
-    templatePath: 'core/file_templates/controller.template',
+    templatePath: `${appRoot}/core/file_templates/controller.template`,
     type: 'controller',
     group: 'controllers',
     replaceToken: 'CONTROLLER_NAME',

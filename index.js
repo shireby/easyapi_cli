@@ -9,6 +9,9 @@ const info = require('./core/commands/info.command');
 const EventEmitter = require('events');
 const colors = require('colors');
 
+var path = require('path');
+global.appRoot = path.resolve(__dirname);
+
 /**  SET CLI USAGE */
 const cliUsage = commandLineUsage(info);
 
