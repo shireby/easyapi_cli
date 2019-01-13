@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import { EasyApiController } from '../../easy-api_core/core/interfaces/easy-api.controller.interface';
+import { EasyApiController } from 'easy-api-cli/lib';
 
 export class %CONTROLLER_NAME% implements EasyApiController {
     public index(req: Request, res: Response): void {

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { EasyApiMiddleware } from '../../easy-api_core/core/interfaces/easy-api.middleware.interface';
+import { EasyApiMiddleware } from 'easy-api-cli/lib';
 
 export class %MIDDLEWARE_NAME% implements EasyApiMiddleware {
     public execute(req: Request , res: Response, next: NextFunction) {
